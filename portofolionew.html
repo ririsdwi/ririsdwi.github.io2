@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+    <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 1000, // Durasi animasi dalam milidetik (1000ms = 1 detik)
+          once: true // Animasi hanya berjalan sekali saat pertama kali muncul
+        });
+
+      });
+    </script>
+
+    <style>
+      .profil-foto {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #3498db;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+        margin-bottom: 10px;
+      }
+      
+      .profil-foto:hover {
+        transform: scale(1.05);
+      }
+      </style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+   <div style="text-align: center; margin-top: 30px;">
+      <a href="CV FOTO.jpg" data-lightbox="profile" data-title="Foto Profil">
+         <img src="CV FOTO.jpg" alt="Foto Profil" class="profil-foto">
+      </a>
+    </div>    
+   <div class="container">
+      <a class="navbar-brand" href="#home">Portofolio Saya</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#karya">Karya</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+         </ul>
+      </div>
+   </div>
+</nav>
+<section id="home" class="vh-100 d-flex align-items-center bg-light text-center" data-aos="fade-in">
+   <div class="container">
+      <h1 class="display-4" id="typing-effect"></h1>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            const text = "Portofolio Riris Dwi Saputri";
+            const typingElement = document.getElementById("typing-effect");
+            let i = 0;
+            function typeWriter() {
+               if (i <= text.length) {
+                  typingElement.textContent = text.substring(0, i) + (i < text.length ? "|" : "");
+                  i++;
+                  setTimeout(typeWriter, 80);
+               } else {
+                  typingElement.textContent = text; // Remove cursor after finish
+               }
+            }
+            typeWriter();
+         });
+      </script>
+      <p class="lead">Saya seorang siswa dengan jurusan pengembangan GIM yang bersemangat, dan inilah karya saya.</p>
+      <button onclick="playAudio()" class="btn btn-primary btn-lg shadow rounded-pill d-inline-flex align-items-center gap-2" style="padding: 12px 32px; font-size: 18px; background: linear-gradient(90deg, #3498db 0%, #6dd5fa 100%); border: none;">
+         <i class="fas fa-play"></i>
+         Mulai Portofolio
+      </button>
+      <audio id="welcome-audio">
+         <source src="selamat-datang.mp3.mp3" type="audio/mpeg">
+       </audio>
+       <script>
+         function playAudio() {
+           const audio = document.getElementById("welcome-audio");
+           audio.play().then(() => {
+             console.log("Audio berhasil diputar");
+           }).catch((error) => {
+             console.error("Gagal memutar audio:", error);
+           });
+         }
+       </script>
+   </div>
+</section>
+
+<section id="about" class="py-5 bg-white" data-aos="fade-right">
+   <div class="container py-5">
+      <div class="row">
+         <div class="col-lg-8 mx-auto text-center">
+            <h2 class="text-primary fw-bold mb-4" style="text-shadow: 2px 4px 10px rgba(52, 152, 219, 0.5);">Tentang Saya</h2>
+            <p class="lead"> <p>Saya merupakan siswa dari SMKN 1 Nganjuk dengan jurusan Pengembangan Gim.</p>
+            <p>Saya memiliki keahlian di bidang desain menggunakan aplikasi Blender, Corel Draw, dan Photoshop.</p>
+            <p>Saya juga mampu membuat game menggunakan aplikasi GDevelop dan Unity, serta memiliki keahlian pemrograman di Visual Studio, Android Studio, dan Visual Studio Code.</p>
+      </div>
+      <div class="row mt-5">
+         <div class="col-lg-6">
+            <div class="mb-4">
+               <h4 class="text-primary fw-bold mb-3"><i class="fas fa-star me-2"></i> Keahlian Utama</h4>
+               <ul class="list-group">
+                  <li class="list-group-item"><i class="fas fa-code text-success me-2"></i> Pemrograman di <strong>Visual Studio</strong> menggunakan <span class="badge bg-secondary">C#</span></li>
+                  <li class="list-group-item"><i class="fab fa-android text-success me-2"></i> Membuat aplikasi di <strong>Android Studio</strong> dengan <span class="badge bg-secondary">Java</span> / <span class="badge bg-secondary">Kotlin</span></li>
+                  <li class="list-group-item"><i class="fas fa-terminal text-success me-2"></i> Mengoperasikan <strong>Visual Studio Code</strong></li>
+               </ul>
+            </div>
+            <div class="mb-4">
+               <h4 class="text-info fw-bold mb-3"><i class="fas fa-lightbulb me-2"></i> Keahlian Lainnya</h4>
+               <ul class="list-group">
+                  <li class="list-group-item"><i class="fas fa-gamepad text-primary me-2"></i> Membuat <strong>game</strong> menggunakan <span class="badge bg-info">GDevelop</span> &amp; <span class="badge bg-info">Unity</span></li>
+                  <li class="list-group-item"><i class="fas fa-cube text-warning me-2"></i> Membuat <strong>animasi 3D</strong> dengan <span class="badge bg-warning text-dark">Blender</span></li>
+                  <li class="list-group-item"><i class="fas fa-user-astronaut text-danger me-2"></i> Membuat <strong>karakter 2D</strong> di <span class="badge bg-danger">Corel Draw</span> &amp; <span class="badge bg-danger">Photoshop</span></li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-lg-6">
+            <div class="mb-4">
+               <h4 class="text-warning fw-bold mb-3"><i class="fas fa-trophy me-2"></i> Pengalaman</h4>
+               <ul class="list-group">
+                  <li class="list-group-item"><i class="fas fa-medal text-success me-2"></i> Finalis <strong>Olimpiade Nasional Informatika</strong></li>
+                  <li class="list-group-item"><i class="fas fa-chalkboard-teacher text-info me-2"></i> Pemateri <strong>Sosialisasi Pembuatan Game</strong> di SMAN 2 Nganjuk</li>
+               </ul>
+            </div>
+            <div class="mb-4">
+               <h4 class="text-success fw-bold mb-3"><i class="fas fa-tools me-2"></i> Software yang Dipelajari</h4>
+               <div class="d-flex flex-wrap justify-content-center">
+                  <span class="badge bg-primary m-1 px-3 py-2">Canva</span>
+                  <span class="badge bg-secondary m-1 px-3 py-2">Excel</span>
+                  <span class="badge bg-success m-1 px-3 py-2">Word</span>
+                  <span class="badge bg-danger m-1 px-3 py-2">PowerPoint</span>
+                  <span class="badge bg-info text-dark m-1 px-3 py-2">Photoshop</span>
+                  <span class="badge bg-warning text-dark m-1 px-3 py-2">Corel Draw</span>
+                  <span class="badge bg-dark m-1 px-3 py-2">Blender</span>
+                  <span class="badge bg-primary m-1 px-3 py-2">GDevelop</span>
+                  <span class="badge bg-secondary m-1 px-3 py-2">Unity</span>
+                  <span class="badge bg-success m-1 px-3 py-2">Visual Studio</span>
+                  <span class="badge bg-info text-dark m-1 px-3 py-2">SQL Server</span>
+                  <span class="badge bg-warning text-dark m-1 px-3 py-2">VS Code</span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row mt-5">
+         <div class="col-lg-6 mx-auto">
+            <h4 class="text-center fw-bold mb-4">Skills</h4>
+            <div>
+               <p>HTML</p>
+               <div class="progress mb-3">
+                  <div class="progress-bar bg-primary" style="width: 50%;">50%</div>
+               </div>
+               <p>CSS</p>
+               <div class="progress mb-3">
+                  <div class="progress-bar bg-success" style="width: 50%;">50%</div>
+               </div>
+               <p>JavaScript</p>
+               <div class="progress mb-3">
+                  <div class="progress-bar bg-warning" style="width: 40%;">40%</div>
+               </div>
+               <p>Graphic Design</p>
+               <div class="progress mb-3">
+                  <div class="progress-bar bg-danger" style="width: 70%;">70%</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section id="karya" class="py-5 bg-light">
+   <div class="container">
+      <h2 class="text-center" data-aos="fade-up" style="font-family: 'Poppins', 'Segoe UI', Arial, sans-serif; font-weight: 700; letter-spacing: 2px; color: #3498db; text-shadow: 1px 2px 8px rgba(52,152,219,0.15);">
+        Karya Saya
+      </h2>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+      <div class="my-5"></div>
+      <h2 class="text-center" data-aos="fade-up">Project photoshop</h2>
+      <div class="row">
+         <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+            <div class="card">
+               <a href="POSTER SERIGALA RIRIS XI-GIM 2.png" data-lightbox="portfolio" data-title="Project 1">
+               <img src="POSTER SERIGALA RIRIS XI-GIM 2.png" class="card-img-top img-fluid" alt="Project 1">
+               </a>
+               <div class="card-body">
+                  <h5 class="card-title">Project 1</h5>
+                    <p class="card-text">Project pertama saya di Photoshop berjudul "HOWL OF THE NIGHT", menampilkan desain poster bertema serigala malam dengan teknik manipulasi gambar dan efek pencahayaan untuk menciptakan suasana misterius.</p>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card">
+               <a href="samurai poster game riris dwi saputri XI-GIM 2.png" data-lightbox="portfolio" data-title="Project 1">
+                  <img src="samurai poster game riris dwi saputri XI-GIM 2.png" class="card-img-top img-fluid" alt="Project 1">
+               </a>
+                  <div class="card-body">
+                    <h5 class="card-title">Project 2</h5>
+                    <p class="card-text">Project kedua saya di Photoshop berjudul "SAMURAI WARRIOR", menampilkan desain poster bertema samurai dengan teknik manipulasi gambar, efek cahaya, dan komposisi warna yang dinamis untuk menciptakan nuansa epik dan dramatis.</p>
+                  </div>
+            </div>
+         </div>
+         <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="card">
+               <a href="POSTERGAMEpertama.jpg" data-lightbox="portfolio" data-title="Project 1">
+                  <img src="POSTERGAMEpertama.jpg" class="card-img-top img-fluid" alt="Project 1">
+               </a>
+               <div class="card-body">
+                  <h5 class="card-title">Project 3</h5>
+                    <p class="card-text">Project ketiga saya di Photoshop berjudul "BATTLE GROUND", menampilkan desain poster bertema pertempuran dengan perpaduan efek visual dan komposisi warna yang kuat untuk menciptakan suasana intens dan dramatis.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+</section>
+<section id="portfolio" class="py-5 bg-light">
+      <div class="container">
+         <h2 class="text-center" data-aos="fade-up">Project Blender</h2>
+         <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+               <div class="card">
+                  <a href="Screenshot 2025-02-09 165507.png" data-lightbox="portfolio" data-title="Project 1">
+                  <img src="Screenshot 2025-02-09 165507.png" class="card-img-top img-fluid" alt="Proyek 1">
+                  </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 1</h5>
+                     <p class="card-text">Project 3D ini merupakan hasil eksplorasi saya di aplikasi Blender, terinspirasi dari gaya Minicraft. Proses pembuatannya cukup menantang karena membutuhkan ketelitian dalam membangun detail objek dan tekstur agar tampak menarik dan presisi.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+               <div class="card">
+                  <a href="Screenshot 2025-02-09 170952.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="Screenshot 2025-02-09 170952.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 2</h5>
+                     <p class="card-text">Project cermin ini menantang karena membutuhkan ketelitian dalam membuat refleksi dan detail permukaan. Hasil akhirnya memberikan kesan realistis dan memuaskan secara visual (CERMIN).</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+               <div class="card">
+                  <a href="Screenshot 2025-02-09 171826.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="Screenshot 2025-02-09 171826.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 3</h5>
+                      <p class="card-text">Project asbak rokok ini menantang karena membutuhkan ketelitian tinggi dalam membuat detail bentuk dan tekstur. Hasil akhirnya tampak realistis dan memuaskan secara visual (ASBAK ROKOK).</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="portfolio" class="py-5 bg-light">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+               <div class="card">
+                  <a href="Screenshot 2025-02-09 172034.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="Screenshot 2025-02-09 172034.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 4</h5>
+                     <p class="card-text">Project kaleng susu ini menonjolkan desain sederhana namun elegan, dengan detail bentuk dan tekstur yang dibuat agar tampak realistis dan menarik secara visual (KALENG SUSU).</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+               <div class="card">
+                  <a href="Screenshot 2025-02-09 172156.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="Screenshot 2025-02-09 172156.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 5</h5>
+                      <p class="card-text">Project ini adalah model 3D kran air yang dibuat untuk kebutuhan sehari-hari. Desainnya sederhana namun fungsional, menonjolkan detail bentuk dan tekstur agar tampak realistis dan mudah dikenali (KRAN AIR).</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+               <div class="card">
+                  <a href="Screenshot 2025-02-09 164400.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="Screenshot 2025-02-09 164400.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 6</h5>
+                      <p class="card-text">Project kursi ini merupakan hasil eksplorasi saya dalam membuat model furnitur 3D di Blender. Proses pembuatannya melatih ketelitian dalam membangun bentuk dan proporsi agar tampak realistis dan nyaman dipandang.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="portfolio" class="py-5 bg-light">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+               <div class="card">
+                  <a href="Screenshot 2025-02-07 125805.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="Screenshot 2025-02-07 125805.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 7</h5>
+                     <p class="card-text">Project jam dinding ini menampilkan desain minimalis namun tetap elegan, dengan detail bentuk dan tekstur yang dibuat agar tampak modern dan menarik secara visual (JAM DINDING).</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+               <div class="card">
+                  <a href="Screenshot 2025-04-07 160138.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="Screenshot 2025-04-07 160138.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 8</h5>
+                     <p class="card-text">Project ini adalah sebuah buku dengan cover yang saya desain sendiri, menggabungkan kreativitas dan teknik desain grafis untuk menghasilkan tampilan yang unik dan menarik. Setiap detail pada cover dibuat dengan penuh perhatian agar buku ini tampil menonjol dan profesional.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+               <div class="card">
+                  <a href="Screenshot 2025-02-09 172403.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="Screenshot 2025-02-09 172403.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 9</h5>
+                      <p class="card-text">Project ini merupakan salah satu karya 3D favorit saya, menantang untuk dikerjakan namun sangat memuaskan saat melihat hasil akhir animasi meja dan taplak yang detail dan realistis.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="portfolio" class="py-5 bg-light">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+               <div class="card">
+                  <a href="Screenshot 2025-02-09 172708.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="Screenshot 2025-02-09 172708.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 10</h5>
+                      <p class="card-text">Project ini merupakan model 3D gelas kaca yang membutuhkan ketelitian tinggi dalam pembuatan detail transparansi dan refleksi. Prosesnya menantang, namun hasil akhirnya tampak realistis dan memuaskan secara visual (GLASS).</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+               <div class="card">
+                  <a href="Screenshot 2025-02-09 172927.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="Screenshot 2025-02-09 172927.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 11</h5>
+                      <p class="card-text">Project Hendril ini merupakan salah satu karya 3D yang paling menantang, karena membutuhkan ketelitian tinggi dalam pembuatan detail bentuk dan tekstur. Proses pengerjaannya melatih kesabaran dan kreativitas untuk menghasilkan hasil akhir yang realistis dan memuaskan.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+               <div class="card">
+                  <a href="Screenshot 2025-04-21 180924.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="Screenshot 2025-04-21 180924.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 12</h5>
+                      <p class="card-text">Project ini adalah animasi 3D vas bunga yang menampilkan detail bentuk dan tekstur bunga serta vas secara realistis. Proses pembuatannya melibatkan teknik modeling, texturing, dan animasi untuk menciptakan tampilan yang hidup dan menarik (VAS BUNGA).</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+ <section id="portfolio" class="py-5 bg-light">
+      <div class="container">
+         <h2 class="text-center">Project unity</h2>
+         <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+               <div class="card">
+                  <a href="Screenshot 2025-01-28 061831.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="Screenshot 2025-01-28 061831.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 1</h5>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+               <div class="card">
+                  <a href="Screenshot 2025-01-27 203723.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="Screenshot 2025-01-27 203723.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 2</h5>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+               <div class="card">
+                  <a href="Screenshot 2025-01-27 192806.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="Screenshot 2025-01-27 192806.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 3</h5>
+                  </div>
+               </div>
+            </div>
+         </div>
+</section>
+<section id="portfolio" class="py-5 bg-light">
+      <div class="container">
+         <h2 class="text-center">Project GDevelop</h2>
+         <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+               <div class="card">
+                  <a href="gdv.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="gdv.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 1</h5>
+                      <a href="https://gd.games/ririsdwisaputri/internal-volcano" target="_blank" class="btn btn-primary">Play Game</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+               <div class="card">
+                  <a href="gdv2.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="gdv2.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                     <h5 class="card-title">Project 2</h5>
+                      <a href="https://gd.games/ririsdwisaputri/scattered-ray" target="_blank" class="btn btn-primary">Play Game</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+               <div class="card">
+                  <a href="mario gdv.png" data-lightbox="portfolio" data-title="Project 1">
+                     <img src="mario gdv.png" class="card-img-top img-fluid" alt="Proyek 1">
+                     </a>
+                  <div class="card-body">
+                      <h5 class="card-title">Project 3</h5>
+                      <a href="https://gd.games/ririsdwisaputri/mariobros" target="_blank" class="btn btn-primary">Play Game</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+</section>
+<section id="portfolio" class="py-5 bg-light">
+   <div class="container">
+      <h2 class="text-center">Project Lainnya</h2>
+      <div class="row">
+         <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+            <div class="card">
+                    <a href="barcode.png" data-lightbox="portfolio" data-title="Barcode" style="display: block; text-align: center;">
+                     <img src="barcode.png" class="card-img-top img-fluid" alt="Barcode Project" style="width: 150px; height: auto; margin: 0 auto;">
+                    </a>
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Project 3d, 2d, serta game</h5>
+                    <p class="card-text">Scan barcode ini, maka akan menampilkan beberapa karya saya yang lainnya</p>
+               </div>
+            </div>
+         </div>
+</section>
+ <section id="contact" class="py-5 bg-white">
+   <div class="container">
+   <h2 class="text-center" data-aos="fade-up">Hubungi Saya</h2>
+   <div class="row mt-4">
+     <div class="col-lg-6 mx-auto text-center" data-aos="fade-up" data-aos-delay="200">
+       <p><i class="fas fa-envelope"></i> okidita1212@gmail.com</p>
+       <p><i class="fas fa-map-marker-alt"></i> Desa Kendalrejo, Bagor, Nganjuk</p>
+      <div class="mt-3"></div>
+      <style>
+        .social-links {
+          display: flex;
+          justify-content: center;
+          gap: 24px;
+          margin-top: 24px;
+        }
+        .social-link {
+          width: 56px;
+          height: 56px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #e0e7ef 0%, #f5fafd 100%);
+          box-shadow: 0 4px 16px rgba(52,152,219,0.10);
+          font-size: 2rem;
+          color: #fff;
+          transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+          position: relative;
+          overflow: hidden;
+        }
+        .social-link:hover {
+          transform: scale(1.18) rotate(-8deg);
+          box-shadow: 0 8px 32px rgba(52,152,219,0.18);
+          background: linear-gradient(135deg, #6dd5fa 0%, #3498db 100%);
+        }
+        .social-link .fa-instagram {
+          background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        .social-link .fa-facebook {
+          color: #1877F3;
+        }
+        .social-link .fa-tiktok {
+          color: #000;
+        }
+        .social-link .fa-whatsapp {
+          color: #25D366;
+        }
+        .social-link .fa {
+          transition: filter 0.3s;
+        }
+        .social-link:hover .fa-instagram {
+          filter: drop-shadow(0 0 8px #fd5949);
+        }
+        .social-link:hover .fa-facebook {
+          filter: drop-shadow(0 0 8px #1877F3);
+        }
+        .social-link:hover .fa-tiktok {
+          filter: drop-shadow(0 0 8px #000);
+        }
+        .social-link:hover .fa-whatsapp {
+          filter: drop-shadow(0 0 8px #25D366);
+        }
+        .social-link:active {
+          animation: bounce 0.4s;
+        }
+        @keyframes bounce {
+          0%, 100% { transform: scale(1.18) rotate(-8deg) translateY(0);}
+          50% { transform: scale(1.18) rotate(-8deg) translateY(-10px);}
+        }
+        /* Tooltip style */
+        .social-link[data-tooltip]:hover:after {
+          content: attr(data-tooltip);
+          position: absolute;
+          bottom: -36px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #3498db;
+          color: #fff;
+          padding: 4px 14px;
+          border-radius: 8px;
+          font-size: 0.95rem;
+          white-space: nowrap;
+          opacity: 1;
+          pointer-events: none;
+          z-index: 10;
+          box-shadow: 0 2px 8px rgba(52,152,219,0.15);
+          animation: fadeIn 0.3s;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateX(-50%) translateY(10px);}
+          to { opacity: 1; transform: translateX(-50%) translateY(0);}
+        }
+      </style>
+      <div class="social-links">
+        <a href="https://instagram.com/ririsdwi_s" target="_blank" class="social-link" aria-label="Instagram" data-tooltip="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/Ririss Putri" target="_blank" class="social-link" aria-label="Facebook" data-tooltip="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.tiktok.com/@beautifulyayaw" target="_blank" class="social-link" aria-label="TikTok" data-tooltip="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://wa.me/62895322354010" target="_blank" class="social-link" aria-label="WhatsApp" data-tooltip="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+     </div>
+   </div>
+ </section>
+
+<footer class="text-center py-4 bg-light">
+ <div class="container">
+   <p>&copy; 2025 portofolio saya</p>
+ </div>
+</footer>
+</body>
+</html>
